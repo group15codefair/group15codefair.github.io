@@ -1,0 +1,1457 @@
+html { height: 100%;
+        margin: 0;
+        padding: 0;
+
+  font-family: arial, sans serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+section#module-maps {
+    clear: both;
+    margin-top: 30px;
+}
+.events-left {
+  width: 45%;
+  float: left;
+  padding: 20px 10px;
+}
+
+.events-right {
+  width: 45%;
+  float: right;
+  padding: 20px 10px;
+}
+
+.events-container-left {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  min-height: 230px;
+}
+
+.events-container-right {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  min-height: 230px;
+}
+#content__left{float: left;
+  width:50%;
+clear: both;
+    
+}
+#content__right{float: right;
+  width:50%;
+  
+}
+.diy-slideshow{
+  position: relative;
+  display: block;
+  overflow: hidden;
+    clear: both;
+}
+figure{
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity;
+}
+figcaption{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: .8em;
+  bottom: .75em;
+  right: .35em;
+  padding: .25em;
+  color: #fff;
+  background box-shadow: rgba(0,0,0, .25);
+  border-radius: 2px;
+}
+figcaption a{
+  color: #fff;
+}
+figure.show{
+  opacity: 1;
+  position: static;
+  transition: 1s opacity;
+}
+.next, .prev{
+  color: black;
+  position: absolute;
+   top: 50%;
+  z-index: 1;
+  font-size: 2em;
+  margin-top: -.75em;
+  opacity: .3;
+  user-select: none;
+}
+.next:hover, .prev:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+.next{
+  right: 0;
+  padding: 10px 5px 15px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.prev{
+  left: 0;
+  padding: 10px 10px 15px 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#toggle, #toggle1, #toggle2, #toggle3, #toggle4, #toggle5  {
+    padding: 6px 10px;
+    border: none;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    background-color: #1f5679;
+    width: 250px;
+    margin: 30px 40px 20px 40px;
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 3px 5px black;
+}
+
+#btnsave, #btnclear, #btnclearstorage {
+    padding: 6px 10px;
+    border: none;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    background-color: #1f5679;
+    width: 180px;
+    margin: 30px 40px 20px 40px;
+    color: white;
+    font-size: 16px;
+    text-shadow: 0 3px 5px black;
+    float: left;
+}
+#txtpmobile{
+    margin-left: 15px;
+    margin-right: 40px;
+}
+#txtpname, #txtpemil {
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 50%;
+}
+
+ #map {
+        height: 100%;
+      }
+
+
+
+}
+#slides{
+    position: relative;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+.slide{
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+.sponsors-container {
+    width: 100%;
+    min-height: 1050px;
+    padding-bottom: 60px;
+}
+
+.sponsors-container a:hover{
+    -webkit-filter: brightness(118%);
+}
+
+.img-box {
+    float:left;
+    width: 270px;
+    padding: 20px;
+}
+
+.img-box-lastleft {
+  float:left;
+  margin-left: 10%;
+  margin-right: 5%;
+  width: 270px;
+  padding: 20px;
+}
+
+.img-box-lastright {
+  float: left;
+  margin-left: 5%;
+  margin-right: 10%;
+  width: 270px;
+  padding: 20px;
+}
+
+.cdu-logo {
+    width: 130px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cdu-logo a:hover {
+    -webkit-filter: brightness(120%);
+}
+
+/*------
+WRAPPER
+------*/
+
+#wrapper{
+width:960px;
+margin: auto;
+}
+
+/*------
+HEADER
+------*/
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  max-width:1000px;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  margin: 10px auto 40px auto;
+  float: none;
+  clear: both;
+}
+
+img {
+	width: 100%;
+	max-height: 300px;
+
+
+}
+
+#countdown{
+  text-align:center;
+  font-size: 60px;
+    color: #333;
+	padding-bottom: 30px;
+    font-family: courier, sans-serif;
+    font-weight: bold;
+    text-shadow:  2px 5px 5px darkgrey;
+}
+
+.countdown-text {
+	padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0;
+    font-size: 24px;
+    color: #4C4C4C;
+}
+
+
+.header {
+	width: 100%;
+	height: 79px;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+
+}
+
+.logo {
+	margin: 10px auto;
+	float: none;
+  text-align: center;
+	width: 250px;
+	display: block;
+}
+
+.logo:hover {
+  -webkit-filter: brightness(120%);
+}
+
+/*----------
+NAVIGATION
+----------*/
+
+/*
+https://codepen.io/andornagy/pen/RNeydj?editors=1100
+*/
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+
+/* Giving a background-color to the nav container. */
+nav {
+	margin:0;
+	padding: 0;
+  border-bottom: 1px solid #EFEFEF;
+    background-color: white;
+}
+
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+nav ul {
+  float: none;
+  padding: 0;
+  margin: auto;
+  list-style: none;
+  position: relative;
+	}
+
+  /* Positioning the navigation items inline */
+  nav ul li {
+    margin: 0px;
+	display:inline-block;
+	float: none;
+  	}
+
+nav ul li a{
+    border-bottom: 3px solid white;
+}
+
+
+    /* Styling the links */
+    nav a {
+      display: block;
+      color: #3B3B3B;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    /* Text color change on Hover */
+    nav a:hover {
+      border-bottom: 3px solid #074096;
+    }
+
+
+    /* Hide Dropdowns by Default
+     * and giving it a position of absolute */
+    nav ul ul {
+      display: none;
+	position: absolute;
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 50px;
+  right:508px;
+    }
+
+    /* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+float:none;
+display:list-item;
+position: relative;
+background-color: #F9F9F9;
+min-width: 176px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+nav ul ul li a {
+  text-align: left;
+  border-bottom: 3px solid #F9F9F9;
+}
+
+nav ul ul li a:hover {
+  color: #3B3B3B;
+  border-bottom: 3px solid #074096;
+}
+
+.active-page {
+  border-bottom: 3px solid #AC0000;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
+.active-page:hover {
+  color:#3B3B3B;
+  border-bottom: 3px solid #AC0000;
+}
+
+ul.menu {
+  text-align: center;
+}
+
+#codefair-nav:hover {
+  color:#074096;
+}
+
+/*-------
+CONTENT
+-------*/
+
+div.content {
+    min-height: 400px;
+  background-color: white;
+  width: 100%;
+  position: static;
+}
+
+.main-container-right p {
+  text-align: center;
+}
+
+.main-container-left {
+  float: left;
+  width: 65%;
+  padding: 20px 30px;
+  margin-top: 0;
+    margin-bottom: 20px;
+    min-height: 200px;
+    position: relative;
+    list-style: none;
+}
+
+.main-container-right {
+  float: right;
+  width: 100%;
+  padding: 20px 30px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 320px;
+    position: relative;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.main-container-right h2{
+  text-align: center;
+}
+
+.main-container-right a{
+  font-size: 18px;
+  text-decoration: underline;
+  color: #074096;
+}
+
+.main-container-right p{
+  font-size: 20px;
+}
+
+
+.main-container-right li{
+  padding-bottom: 8px;
+}
+
+.main-container-left li{
+  padding-bottom: 8px;
+}
+
+.main-container p {
+  padding: 20px;
+  margin-top: 5px;
+  line-height: 1.25px;
+}
+
+.main-left {
+  float: left;
+  width:40%;
+    clear: both;
+
+}
+
+.main-right {
+  float: right;
+  width:60%;
+}
+
+
+.content {
+	background-color: white;
+	margin: 80px auto 20px;
+	max-width: 100%;
+	clear: both;
+}
+
+body { height: 100%;
+
+	background-color: white;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+.home-container {
+	min-height: 850px;
+  position: static;
+    padding-bottom: 60px;
+}
+
+.about-container {
+    min-height: 250px;
+  position: static;
+    padding-bottom: 60px;
+}
+
+.pastevents_2016 {
+  padding: 10px;
+}
+
+.pastevents_2016 h3 {
+  color: #AC0000;
+}
+
+.pastevents_2014 h3 {
+  color: #AC0000;
+}
+
+.pastevents_2014 {
+  padding: 10px;
+}
+
+a.backtotop {
+  padding: 10px 15px;
+  border: none;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px;
+  background-color: #1f5679;
+  width: 85px;
+  float: right;
+  color: white;
+  font-size: 16px;
+  text-shadow: 0 2px 4px black;
+}
+
+}
+.home_p {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+  margin-bottom: 5%;
+    float: left;
+}
+
+
+.pastevents-container {
+    float: none;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.pastevents-container h2 {
+    text-align: left;
+}
+
+.winner {
+  color: #074096;
+}
+
+.page-title {
+  color: #AC0000;
+	text-align: center;
+  font-variant: small-caps;
+	font-size: 25px;
+  padding: 30px 0 30px 0;
+	margin: 0;
+  clear: both;
+  width: 100%;
+  text-shadow: 0 3px 5px lightgrey;
+}
+
+h2 {
+  color:#AC0000;
+	text-align: left;
+	font-size: 25px;
+  margin-bottom: 40px;
+  padding: 5px 10px 0 0;
+}
+
+h3 {
+	color: #AC0000;
+    text-align: left;
+}
+
+hr {
+	margin: 50px 0 50px 0;
+	border: solid 1px;
+	border-color: lightgrey;
+  opacity: 0.3;
+}
+
+/*------
+FOOTER
+------*/
+
+.footer {
+	font-size: 12px;
+	padding: 25px 0 70px 0;
+	margin: 20px 0 0 0;
+    clear: both;
+	color: #333;
+    float: none;
+    border-top: 2px solid lightgrey;
+
+}
+
+.footernav {
+  text-align: center;
+  margin-bottom: 10px;
+    margin-top: 10px;
+    color:#333;
+
+}
+
+.footernav a {
+  font-size: 18px;
+  color: #074096;
+  padding: 2px 15px;
+  border-right: 2px solid #999;
+}
+
+.footernav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #333;
+}
+
+#footernavleft {
+  border-right: 2px solid #999;
+}
+
+#footernavright {
+  border: none;
+}
+
+.footer p {
+  float: right;
+  clear: both;
+  padding-right: 20px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/*-------------
+MEDIA QUERIES
+-------------*/
+
+@media all and (max-width : 1020px) {
+  div.content {
+    width: 80%;
+  }
+
+  .sponsors-container {
+    min-height: 850px;
+  }
+
+  .img-box {
+      float:left;
+      width: 210px;
+      padding: 20px;
+  }
+
+  .img-box-lastleft {
+    float:left;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 210px;
+    padding: 20px;
+  }
+
+  .img-box-lastright {
+    float: left;
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 210px;
+    padding: 20px;
+  }
+
+
+  .footer p {
+    padding-right: 10%;
+  }
+}
+
+@media all and (max-width : 890px) {
+  div.content {
+    width: 85%;
+  }
+
+  .img-box {
+      float:left;
+      width: 225px;
+      padding: 20px;
+  }
+
+  .img-box-lastleft {
+    float:left;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 225px;
+    padding: 20px;
+  }
+
+  .img-box-lastright {
+    float: left;
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 225px;
+    padding: 20px;
+  }
+
+
+}
+
+@media all and (max-width : 768px) {
+  div.content {
+    width: 80%;
+  }
+
+  .img-box {
+      float:left;
+      width: 210px;
+      padding: 20px;
+  }
+
+  .img-box-lastleft {
+    float:left;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 210px;
+    padding: 20px;
+  }
+
+  .img-box-lastright {
+    float: left;
+    margin-left: 5%;
+    margin-right: 10%;
+    width: 210px;
+    padding: 20px;
+  }
+
+
+}
+
+
+@media all and (max-width : 728px) {
+    
+    input#btnclearstorage {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    input#btnclear {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    input#btnsave {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #wrapper {
+        width: 100%;
+    }
+
+  div.content {
+    width: 90%;
+  }
+  .header {
+    width: 100%;
+  }
+
+.logo {
+  width: 200px;
+}
+
+.cdu-logo {
+    width: 100px;
+}
+
+.sponsors-container {
+  min-height: 1400px;
+}
+
+
+.img-box, .img-box-lastleft, .img-box-lastright {
+    float:left;
+    width: 240px;
+    padding: 30px;
+    margin: 0;
+}
+
+
+  @media all and (max-width : 330px) {
+
+  	nav ul li {
+  		display:block;
+  		width: 94%;
+  	}
+
+    div.slideshow-container {
+      display: none;
+    }
+
+    .countdown-text {
+      font-size: 14px;
+    }
+  }
+
+@media all and (max-width : 460px) {
+    div.main-container-left li {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div.main-container-right li {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+	.content {
+		width: 90%;
+    clear: both;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.content {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 820px) {
+
+
+  	nav {
+  		margin: 0;
+  	}
+
+    /* Hide the navigation menu by default */
+  	/* Also hide the  */
+  	.toggle + a,
+  	.menu {
+  		display: none;
+  	}
+
+    /* Styling the toggle lable */
+  .toggle {
+    display: block;
+    padding: 14px 20px;
+    color:#3B3B3B;
+    font-size: 17px;
+    text-decoration:none;
+    border:none;
+  }
+
+  #menu-nav {
+    text-align: right;
+  }
+
+  #menu-nav:hover {
+    color: #074096;
+  }
+
+  #codefair-nav {
+    text-align: left;
+  }
+
+    /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked + ul {
+    display: block;
+    width: 100%;
+  }
+
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+    float: left;
+    }
+
+  nav ul li a {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+    border-bottom: 3px solid white;
+  }
+
+  nav ul li a:hover {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+    border-bottom: 3px solid #074096;
+  }
+
+
+  	nav ul ul .toggle,
+  	nav ul ul a {
+  		padding: 0 40px;
+  	}
+
+  	nav ul li ul li .toggle,
+  	nav ul ul a,
+    nav ul ul ul a{
+      padding:14px 20px;
+  		font-size:17px;
+  	}
+
+  	nav ul li ul li .toggle,
+  	nav ul ul a {
+  		background-color: #F9F9F9;
+      color: #3B3B3B;
+  	}
+
+    	/* Hide Dropdowns by Default */
+    	nav ul ul {
+    		float: none;
+        position: static;
+    		color: #ffffff;
+
+    		/* has to be the same number as the "line-height" of "nav a" */
+    	}
+
+    	/* Hide menus on hover */
+    	nav ul ul li:hover > ul,
+    	nav ul li:hover > ul {
+    		display: none;
+    	}
+
+    	/* Fisrt Tier Dropdown */
+    	nav ul ul li {
+    		display: block;
+    		width: 100%;
+    	}
+    }
+
+    @media all and (max-width : 330px) {
+
+    	nav ul li {
+    		display:block;
+    		width: 94%;
+    	}
+
+      div.slideshow-container {
+        display: none;
+      }
+
+      .cdu-logo {
+          display: none;
+      }
+
+      h3.countdown-text {
+        font-size: 18px;
+      }
+
+    }
+
+    @media all and (max-width : 580px) {
+
+      .home-container {
+        min-height: inherit;
+      }
+
+      .sponsors-container {
+        min-height: 1400px;
+      }
+
+      div.img-box {
+        padding: auto;
+      }
+        #content__left{float: none;
+  width:100%;
+clear: both;
+    
+}
+#content__right{float: none;
+  width:100%;
+  
+    }
+
+  @media all and (max-width : 460px) {
+      div.main-container-left li {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+      }
+      div.main-container-right li {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+      }
+      div#countdown {
+        font-size: 14px;
+      }
+  }
+
+  @media all and (max-width : 420px) {
+
+      .cdu-logo {
+          width: 20%;
+          position: absolute;
+          left: -10px;
+      }
+
+      div.main-left {
+          width: 100%;
+      }
+      div.main-container-left {
+          list-style-type: none;
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+
+      div.main-right {
+          width: 100%;
+      }
+      div.main-container-right {
+          width: 150px;
+          list-style-type: none;
+          padding-left: 20px;
+          padding-right: 20px;
+      }
+
+  }
+
+  @media screen and (max-width: 1020px) {
+  	.content {
+  		width: 90%;
+      clear: both;
+  	}
+  }
+
+  @media screen and (max-width: 920px) {
+  	.content {
+  		width: 90%;
+  	}
+  }
+
+  @media screen and (max-width: 820px) {
+
+  div.slideshow-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+      #wrapper {
+          width: 100%;
+      }
+
+  	.content {
+  		width: 90%;
+  	}
+
+    .home-container {
+      min-height: 960px;
+    }
+    .home_p, .countdown, .main-left, .main-right {
+      float: none;
+      width: 100%;
+        overflow: hidden;
+
+    }
+
+    .home_p {
+      width: 100%;
+    }
+
+    div.main-container-left {
+      margin: 15px auto 25px auto;
+      float: none;
+      width: 90%;
+    }
+
+     div.main-container-right {
+       margin: 15px auto 25px auto;
+       float: none;
+       width: 90%;
+     }
+
+
+    .footer p {
+      padding-right: 8%;
+    }
+
+  }
+
+  @media screen and (max-width: 720px) {
+  	.content {
+  		width: 90%;
+  	}
+
+    .footer {
+      padding-top: 20px 0;
+      margin-top: 30px;
+    }
+
+    .footernav a {
+      display: block;
+      border: none;
+      padding: 5px 0 15px 5%;
+      width: 90%;
+      text-align: left;
+      text-decoration: underline;
+    }
+
+    #footernavleft {
+      border-right: none;
+    }
+
+    .footer p {
+      padding-right: 5%;
+    }
+  }
+
+  @media screen and (max-width : 666px) {
+    div#countdown {
+      font-size: 34px;
+    }
+
+    .sponsors-container {
+      min-height: 850px;
+    }
+
+    .img-box, .img-box-lastleft, .img-box-lastright {
+        float:left;
+        width: 200px;
+        padding: 30px;
+        margin: 0;
+    }
+      .events-left, .events-right{
+  float: none;
+  width: 100%;
+}
+
+  #toggle, #toggle1, #toggle2, #toggle3, #toggle4, #toggle5  {
+      padding: 6px 10px;
+      width: 30%;
+      margin-top: 30px;
+      margin-left: 35%;
+      text-align: center;
+  }
+
+  }
+
+  @media all and (max-width : 1020px) {
+    div.content {
+      width: 80%;
+    }
+
+    .footer p {
+      padding-right: 10%;
+    }
+  }
+
+  @media all and (max-width : 890px) {
+    div.content {
+      width: 85%;
+    }
+
+  }
+
+  @media all and (max-width : 768px) {
+    div.content {
+      width: 80%;
+    }
+
+  }
+
+
+  @media all and (max-width : 728px) {
+
+    
+    #wrapper {
+        width: 100%;
+    }
+
+  div.content {
+    width: 90%;
+  }
+  .header {
+    width: 100%;
+  }
+
+.logo {
+  width: 200px;
+}
+
+.cdu-logo {
+    width: 100px;
+}
+
+.sponsors-container {
+  min-height: 1400px;
+}
+
+
+.img-box, .img-box-lastleft, .img-box-lastright {
+    float:left;
+    width: 240px;
+    padding: 30px;
+    margin: 0;
+}
+
+.events-left, .events-right{
+  float: none;
+  width: 100%;
+}
+
+  #toggle, #toggle1, #toggle2, #toggle3, #toggle4, #toggle5  {
+      padding: 6px 10px;
+      width: 30%;
+      margin-top: 30px;
+      margin-left: 35%;
+      text-align: center;
+  }
+}
+
+@media all and (max-width : 300px) {
+  #toggle, #toggle1, #toggle2, #toggle3, #toggle4, #toggle5  {
+      width: 100%;
+      margin-left: 0;
+  }
+}
+
+  @media all and (max-width : 330px) {
+
+  	nav ul li {
+  		display:block;
+  		width: 94%;
+  	}
+
+    div.slideshow-container {
+      display: none;
+    }
+
+    .countdown-text {
+      font-size: 14px;
+    }
+  }
+
+@media all and (max-width : 460px) {
+    div.main-container-left li {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div.main-container-right li {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+	.content {
+		width: 90%;
+    clear: both;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.content {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 820px) {
+
+
+  	nav {
+  		margin: 0;
+  	}
+
+    /* Hide the navigation menu by default */
+  	/* Also hide the  */
+  	.toggle + a,
+  	.menu {
+  		display: none;
+  	}
+
+    /* Styling the toggle lable */
+  .toggle {
+    display: block;
+    padding: 14px 20px;
+    color:#3B3B3B;
+    font-size: 17px;
+    text-decoration:none;
+    border:none;
+  }
+
+  #menu-nav {
+    text-align: right;
+  }
+
+  #menu-nav:hover {
+    color: #074096;
+  }
+
+  #codefair-nav {
+    text-align: left;
+  }
+
+    /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked + ul {
+    display: block;
+    width: 100%;
+  }
+
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+    float: left;
+    }
+
+  nav ul li a {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+    border-bottom: 3px solid white;
+  }
+
+  nav ul li a:hover {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 17px;
+    border-bottom: 3px solid #074096;
+  }
+
+
+  	nav ul ul .toggle,
+  	nav ul ul a {
+  		padding: 0 40px;
+  	}
+
+  	nav ul li ul li .toggle,
+  	nav ul ul a,
+    nav ul ul ul a{
+      padding:14px 20px;
+  		font-size:17px;
+  	}
+
+  	nav ul li ul li .toggle,
+  	nav ul ul a {
+  		background-color: #F9F9F9;
+      color: #3B3B3B;
+  	}
+
+    	/* Hide Dropdowns by Default */
+    	nav ul ul {
+    		float: none;
+        position: static;
+    		color: #ffffff;
+
+    		/* has to be the same number as the "line-height" of "nav a" */
+    	}
+
+    	/* Hide menus on hover */
+    	nav ul ul li:hover > ul,
+    	nav ul li:hover > ul {
+    		display: none;
+    	}
+
+    	/* Fisrt Tier Dropdown */
+    	nav ul ul li {
+    		display: block;
+    		width: 100%;
+    	}
+    }
+
+div.slideshow-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+    #wrapper {
+        width: 100%;
+    }
+
+	.content {
+		width: 90%;
+	}
+
+  .home-container {
+    min-height: 960px;
+  }
+  .home_p, .countdown, .main-left, .main-right {
+    float: none;
+    width: 100%;
+      overflow: hidden;
+
+  }
+
+  .home_p {
+    width: 100%;
+  }
+
+  div.main-container-left {
+    margin: 15px auto 25px auto;
+    float: none;
+    width: 90%;
+  }
+
+   div.main-container-right {
+     margin: 15px auto 25px auto;
+     float: none;
+     width: 90%;
+   }
+
+
+  .footer p {
+    padding-right: 8%;
+  }
+
+}
